@@ -1,6 +1,6 @@
 import React from "react";
 
-interface LayoutChildrenType {
+type LayoutChildrenType = {
   children: React.ReactNode;
 }
 

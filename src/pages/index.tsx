@@ -1,3 +1,4 @@
+import { css } from '../../styled-system/css';
 import React, { useEffect } from "react";
 import Layout from "../components/layout";
 import gsap from "gsap";
@@ -33,11 +34,13 @@ export default function Home() {
     initAnimation();
   }, []);
 
+
+
   return (
     <>
       <Layout>
-        <div className={"background h-screen w-full grid place-content-center"}>
-          <span className={"text text-6xl font-thin text-cyan-300 tracking-wider"}>
+        <div className={`background ${css({ h: 'screen', w: 'full', display: 'grid', placeContent: 'center' })}`}>
+          <span className={`text ${css({ fontSize: '4rem', fontWeight: 'thin', color: 'cyan.300', letterSpacing: 'wider' })}`}>
             Hello Gatsby
           </span>
         </div>
