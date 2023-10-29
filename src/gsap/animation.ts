@@ -13,7 +13,9 @@ export function textSplit(target: gsap.DOMTarget) {
     ease: 'expo.in',
     paused: true,
   })
+
   gsap.set(split.chars, { opacity: 0 })
+
   ScrollTrigger.create({
     trigger: target,
     start: `center center+=${textHeight / 2}`,
