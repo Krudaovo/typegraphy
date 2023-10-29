@@ -53,7 +53,7 @@ module.exports = {
         "support-sub-vivid-900": "#610316",
       },
       fontFamily: {
-
+        "roboto": ['Roboto']
       },
       screens: {
         "xs": "375px",
