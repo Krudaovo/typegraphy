@@ -29,7 +29,7 @@ export default function Home() {
     }
   }, []);
 
-  console.log('🫠🫠🫠🫠');
+  console.log('🫠🫠🫠🫠🫠');
 
   return (
     <>
