@@ -7,7 +7,9 @@ type LayoutChildrenType = {
 export default function Layout({ children }: LayoutChildrenType) {
   return (
     <>
-      {children}
+      <div className='background bg-neutral-500 text-neutral-300'>
+        {children}
+      </div>
     </>
   );
 };

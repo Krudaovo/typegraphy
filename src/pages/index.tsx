@@ -1,47 +1,27 @@
-import React, { useEffect } from "react";
-import Layout from "../components/layout";
-import gsap from "gsap";
+import React, { useEffect } from 'react';
+import Layout from '../components/layout';
+import gsap from 'gsap';
 
 export default function Home() {
 
-  const initAnimation = (): void => {
-
-    const gatsbyColor = "#633194";
-    const tailwindColor = "#38BDF8";
-
-    gsap.fromTo(".background", {
-      background: gatsbyColor,
-    }, {
-      background: tailwindColor,
-      yoyo: true,
-      repeat: -1,
-      repeatDelay: 2
-    });
-
-    gsap.fromTo(".text", {
-      color: tailwindColor,
-    }, {
-      color: gatsbyColor,
-      yoyo: true,
-      repeat: -1,
-      repeatDelay: 2
-    });
-
-    console.log("init")
-  };
   useEffect(() => {
-    initAnimation();
-  }, []);
+    console.log('happy tween');
+    const neutralBefore = "#7E7E7E";
+    const neutralAfter = "#3B3B3B";
 
+    gsap.fromTo('.background', {
+      color: neutralBefore
+    }, {
+      color: neutralAfter
+    })
+  }, []);
 
   return (
     <>
       <Layout>
-        <div className={`background h-screen w-full grid place-content-center`}>
-          <span className={`text text-[4rem] font-thin text-cyan-300 tracking-wider`}>
-            Hello Gatsby
-          </span>
-        </div>
+        <main className='h-screen w-full flex'>
+
+        </main>
       </Layout>
     </>
   );
