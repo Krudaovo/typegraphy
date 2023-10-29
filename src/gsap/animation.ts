@@ -22,6 +22,5 @@ export function textSplit(target: gsap.DOMTarget) {
     onEnterBack: () => textFade.play(),
     onLeave: () => textFade.reverse(),
     onLeaveBack: () => textFade.reverse(),
-
   })
 }
