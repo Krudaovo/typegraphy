@@ -2,7 +2,6 @@ node_modules/
 .cache/
 public
 src/gatsby-types.d.ts
-src/images
 .npmrc
 .nvmrc
 gsap-bonus.tgz

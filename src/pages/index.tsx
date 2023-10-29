@@ -2,8 +2,18 @@ import React, { useEffect } from 'react';
 import Layout from '../components/layout';
 import BlankSection from '../components/blank-section';
 import { textSplit } from '../gsap/animation';
+import { graphql, PageProps, HeadProps } from 'gatsby';
 
-export default function Home() {
+type DataTypes = {
+  site: {
+    siteMetadata: {
+      title: string
+      description: string
+    }
+  }
+}
+
+export default function Home({ data }: PageProps<DataTypes>) {
 
   const wisdom: string[] = [
     'Impossible is nothing.',
@@ -29,8 +39,6 @@ export default function Home() {
     }
   }, []);
 
-  console.log('🫠🫠🫠🫠🫠');
-
   return (
     <>
       <Layout>
@@ -51,3 +59,19 @@ export default function Home() {
     </>
   );
 };
+export const Head = (props: HeadProps<DataTypes>) => (
+  <>
+    <title>{props.data.site.siteMetadata.title}</title>
+    <meta name='description' content={props.data.site.siteMetadata.description} />
+  </>
+)
+export const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        description
+        title
+      }
+    }
+  }
+`
