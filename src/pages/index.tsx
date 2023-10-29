@@ -19,7 +19,8 @@ export default function Home() {
     'Time heals everything.',
     'Forgive and forget.',
     'Failure teaches success.',
-    'Never say never.'
+    'Never say never.',
+    'I’m Happy.'
   ];
 
   useEffect(() => {
