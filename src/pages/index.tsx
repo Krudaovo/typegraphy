@@ -73,8 +73,7 @@ export const Head = (props: HeadProps<DataTypes>) => (
     <meta name='description' content={props.data.site.siteMetadata.description} />
     <meta property='og:title' content={props.data.site.siteMetadata.title} />
     <meta property='og:description' content={props.data.site.siteMetadata.description} />
-    <meta property='og:url' content='https://gentle-kashata-9690af.netlify.app' />
-    <meta property='og:image' content={props.data.allFile.edges.node.publicURL} />
+    <meta property='og:url' content='https://gentle-kashata-9690af.netlify.app' />>
     <meta property='og:type' content='demo' />
     <meta property='og:site_name' content={props.data.site.siteMetadata.title} />
     <meta name='twitter:card' content='summary_large_image' />
