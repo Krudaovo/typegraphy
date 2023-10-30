@@ -11,6 +11,13 @@ type DataTypes = {
       description: string
     }
   }
+  allFile: {
+    edges: {
+      node: {
+        publicURL: string
+      }
+    }
+  }
 }
 
 export default function Home({ data }: PageProps<DataTypes>) {
@@ -61,8 +68,17 @@ export default function Home({ data }: PageProps<DataTypes>) {
 };
 export const Head = (props: HeadProps<DataTypes>) => (
   <>
+    <html lang='ja' />
     <title>{props.data.site.siteMetadata.title}</title>
     <meta name='description' content={props.data.site.siteMetadata.description} />
+    <meta property='og:title' content={props.data.site.siteMetadata.title} />
+    <meta property='og:description' content={props.data.site.siteMetadata.description} />
+    <meta property='og:url' content='https://gentle-kashata-9690af.netlify.app' />
+    <meta property='og:image' content={props.data.allFile.edges.node.publicURL} />
+    <meta property='og:type' content='demo' />
+    <meta property='og:site_name' content={props.data.site.siteMetadata.title} />
+    <meta name='twitter:card' content='summary_large_image' />
+    <meta name='twitter:site' content='@IKEDA__JS' />
   </>
 )
 export const query = graphql`
@@ -71,6 +87,13 @@ export const query = graphql`
       siteMetadata {
         description
         title
+      }
+    }
+    allFile(filter: {id: {eq: "11e2fff9-a1d7-588f-b1ee-638fe71f98a7"}}) {
+      edges {
+        node {
+          publicURL
+        }
       }
     }
   }
