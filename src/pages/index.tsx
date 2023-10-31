@@ -80,7 +80,7 @@ export const Head = (props: HeadProps<DataTypes>) => (
     <meta property='og:url' content='https://gentle-kashata-9690af.netlify.app' />
     <meta property='og:type' content='demo' />
     <meta property='og:site_name' content={props.data.site.siteMetadata.title} />
-    <meta property='og:image' content={`http:/${props.data.allFile.edges.node.childImageSharp.fluid.src}`} />
+    <meta property='og:image' content={`https://gentle-kashata-9690af.netlify.app/image`} />
     <meta name='twitter:card' content='summary_large_image' />
     <meta name='twitter:site' content='@IKEDA__JS' />
   </>
