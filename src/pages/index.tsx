@@ -14,7 +14,11 @@ type DataTypes = {
   allFile: {
     edges: {
       node: {
-        publicURL: string
+        childImageSharp: {
+          fluid: {
+            src: string
+          }
+        }
       }
     }
   }
@@ -73,9 +77,10 @@ export const Head = (props: HeadProps<DataTypes>) => (
     <meta name='description' content={props.data.site.siteMetadata.description} />
     <meta property='og:title' content={props.data.site.siteMetadata.title} />
     <meta property='og:description' content={props.data.site.siteMetadata.description} />
-    <meta property='og:url' content='https://gentle-kashata-9690af.netlify.app' />>
+    <meta property='og:url' content='https://gentle-kashata-9690af.netlify.app' />
     <meta property='og:type' content='demo' />
     <meta property='og:site_name' content={props.data.site.siteMetadata.title} />
+    <meta property='og:image' content={props.data.allFile.edges.node.childImageSharp.fluid.src} />
     <meta name='twitter:card' content='summary_large_image' />
     <meta name='twitter:site' content='@IKEDA__JS' />
   </>
@@ -91,7 +96,11 @@ export const query = graphql`
     allFile(filter: {id: {eq: "11e2fff9-a1d7-588f-b1ee-638fe71f98a7"}}) {
       edges {
         node {
-          publicURL
+          childImageSharp {
+            fluid: {
+              src
+            }
+          }
         }
       }
     }
