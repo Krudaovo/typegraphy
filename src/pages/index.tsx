@@ -97,7 +97,7 @@ export const query = graphql`
       edges {
         node {
           childImageSharp {
-            fluid: {
+            fluid {
               src
             }
           }
