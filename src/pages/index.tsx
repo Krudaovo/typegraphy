@@ -92,16 +92,5 @@ export const query = graphql`
         title
       }
     }
-    allFile(filter: {id: {eq: "11e2fff9-a1d7-588f-b1ee-638fe71f98a7"}}) {
-      edges {
-        node {
-          childImageSharp {
-            fluid {
-              src
-            }
-          }
-        }
-      }
-    }
   }
 `
